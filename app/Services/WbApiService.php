@@ -42,7 +42,7 @@ class WbApiService
             }
             yield $data;
             $page++;
-            sleep($this->delay);
+            usleep($this->delay * 1_000_000);
         } while (true);
     }
 
